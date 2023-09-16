@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{.MaxX}} {{.MaxY}}">
+    <style>
+        text {
+            font: 6px "Fira Code", sans-serif;
+        }
+        .label {
+            font: 5px "Fira Code", sans-serif;
+        }
+    </style>
+    <g stroke-width="1" stroke="black">
+{{- range .Nodes}}
+        <path d="M{{.X}},{{.Y}}L{{.Lx}},{{.Ly }}" />
+{{- end}}
+    </g>
+    <g fill="white" stroke-width="0.5" stroke="black">
+{{- range .Nodes}}
+        <circle cx="{{.X}}" cy="{{.Y}}" r="5" />
+{{- end}}
+    </g>
+    <g fill="black" text-anchor="middle">
+{{- range $node := .Nodes}}
+        <text x="{{.X}}" y="{{textOffset $node.Y}}">{{.S}}</text>
+{{- end}}
+    </g>
+    <g fill="black" text-anchor="middle">
+        <text x="{{.LabelX}}" y="{{.LabelY}}" class="label">
+            {{.Expr}}
+        </text>
+    </g>
+</svg>
