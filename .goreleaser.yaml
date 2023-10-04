@@ -1,0 +1,14 @@
+brews:
+  - tap:
+      owner: evylang
+      name: homebrew-tap
+      branch: main
+
+    commit_author:
+      name: goreleaserbot
+      email: bot@goreleaser.com
+
+    commit_msg_template: "Update brew formula for {{ .ProjectName }} version {{ .Tag }}"
+    homepage: "https://evy.dev"
+    description: "Pratt is a minimal Pratt parser."
+    license: "Apache-2.0"
