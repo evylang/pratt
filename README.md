@@ -31,3 +31,21 @@ Try it with:
 go install ./...
 pratt '1 * 2 + 3 * 4' | svg -o
 ```
+
+## Installation
+
+You can install the `pratt` command without cloning and rebuilding this repo.
+
+### Linux and Windows
+
+Download the [latest release] for your platform, unzip it and add `pratt`
+to your path.
+
+### macOS
+
+Use [Homebrew] to install `pratt`.
+
+    brew install evylang/tap/pratt
+
+[latest release]: https://github.com/evylang/pratt/releases/latest
+[Homebrew]: https://brew.sh/
