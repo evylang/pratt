@@ -1,5 +1,5 @@
 brews:
-  - tap:
+  - repository:
       owner: evylang
       name: homebrew-tap
       branch: main
